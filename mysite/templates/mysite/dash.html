@@ -1,0 +1,43 @@
+<!-- {{channel_id}}<br>
+{{channel_title}}<br>
+{{channel_video_count.length}}<br> -->
+
+<style type="text/css">
+    .table {
+        width: 100%;
+        margin-bottom: 20px;
+        border: 15px solid #F2F8F8;
+        border-top: 5px solid #F2F8F8;
+        border-collapse: collapse; 
+    }
+    .table th {
+        font-weight: bold;
+        padding: 5px;
+        background: #F2F8F8;
+        border: none;
+        border-bottom: 5px solid #F2F8F8;
+    }
+    .table td {
+        padding: 5px;
+        border: none;
+        border-bottom: 5px solid #F2F8F8;
+    }
+</style>
+
+<table class="table">
+    <tr>
+        {% for key in keys %}
+            <th>{{key}}</th>
+        {%endfor%}
+    </tr>
+    {% for key in data %}
+        <tr>
+            <td>{{key.channel_id}}</td>
+            <td>{{key.channel_title}}</td>
+            <td>{{key.channel_video_count}}</td>
+        </tr>
+    {% endfor %}
+</table>
+<!-- {% for key, value in channel_id.items%}
+    {{key}}: {{value}}<br>
+{% endfor %} -->

@@ -1,0 +1,13 @@
+<h1>Инфлюнсеры</h1>
+<form action="{% url 'dash' %}" method="post">
+    {% csrf_token %}
+    <p>Введите 2 google API-key для youtube v3</p>
+    <input name="api1" id="qpi1" type="text" size="36" placeholder="API-key 1"><br>
+    <input name="api2" id="qpi2" type="text" size="36" placeholder="API-key 2"><br>
+    <p>Выберите семантическое ядро</p>
+    <select name="kernel" id="hh">
+        <option name="choice" id="ch1" selected="true" value="stand">Стандартное (от команды НЦКР)</option>
+        <option name="choice" id="ch2" disabled="disabled" value="other">Загрузить свое</option>
+    </select><br>
+    <input type="submit">
+</form>
