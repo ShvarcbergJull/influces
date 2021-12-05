@@ -24,20 +24,15 @@
     }
 </style>
 
-<table class="table">
-    <tr>
-        {% for key in keys %}
-            <th>{{key}}</th>
-        {%endfor%}
-    </tr>
-    {% for key in data %}
+{% for i in ans %}
+    <h2>{{i.t}}</h2>
+    <table class=table>
+    {% for key in i.data %}
         <tr>
-            <td>{{key.channel_id}}</td>
-            <td>{{key.channel_title}}</td>
-            <td>{{key.channel_video_count}}</td>
+        {% for t, b in key.items %}
+            <td>{{b}}</td>
+        {% endfor %}
         </tr>
     {% endfor %}
-</table>
-<!-- {% for key, value in channel_id.items%}
-    {{key}}: {{value}}<br>
-{% endfor %} -->
+    </table>
+{% endfor %}
